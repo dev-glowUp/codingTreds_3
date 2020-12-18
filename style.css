@@ -12,7 +12,6 @@ body {
     font-family: 'Space Mono', monospace;
     font-size: 18px;
     color: #2b2b2b;
-    /* min-height: 100vh; */
 }
 
 .logo {
@@ -28,67 +27,70 @@ body {
 }
 
 .section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 50px 50px 50px;
+    margin: 40px 0px;
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+
 }
 
-#container-product {
+.container-product {
     position: relative;
-  }
+    grid-column-start: 3;
+}
 
-#product-svg {
+.product-svg {
     position: relative;
     z-index: 2;
     mix-blend-mode: multiply;
     top: 0px;
     left: 0px;
     width: 650px;
-  }
+}
 
-  #product-shape {
+.product-shape {
     fill: #DBED64;
-  }
+}
 
-  #background-image {
+.background-image {
     position: absolute;
     height: auto;
     top: 0px;
     left: 0px;
-  }
+}
 
-  .product-description {
-      padding: 50px;
+.product-description {
+      padding: 0px 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       letter-spacing: 0.35px;
       line-height: 30px;
-      height: 870px;
+      height: 775px;
+      max-width: 550px;
+      grid-column-start: 2;
+
       /* box-sizing:content-box; */
+}
 
-  }
-
-  h2 {
+h2 {
     font-family: 'Space Mono', monospace;
     font-size: 40px;
     font-weight: 400;
     text-align: right;
 
-  }
+}
 
-  p {
+p {
       font-size: 18px;
       text-align: right;
       font-family: 'Space Mono', monospace;
-  }
+}
 
-  .color-change-dot {
+.color-change-dot {
       display: inline-block;
-  }
+}
 
-  .dot {
+.dot {
     height: 40px;
     width: 40px;
     background-color: #bbb;
@@ -96,16 +98,17 @@ body {
     display: inline-block;
     margin-left: 10px;
     cursor: pointer;
-  }
+}
 
-  .color-name {
+.color-name {
       text-transform: uppercase;
       margin-left: 10px;
-  }
+}
 
-  /* .dot:nth-child(1) {
+  /* 
+  .dot:nth-child(1) {
       background-color: #2f40f4;
-  } */
+}
 
   .dot:nth-child(2) {
     background-color: #262424;
@@ -131,13 +134,14 @@ body {
     border: 3px solid #2b2b2b;
 }
 
+*/
 
 
-  hr {
+hr {
     border: 1px solid #2b2b2b;
-  }
+}
 
-  a {
+a {
     border: 2px solid #2b2b2b;
     padding: 10px;
     text-align: center;
@@ -147,9 +151,9 @@ body {
     font-weight: 400;
     line-height: 50px;
     color: #2b2b2b;
-  }
+}
 
-  a:hover {
+a:hover {
       background-color: #2b2b2b;
       color: white;
-  }
+}
