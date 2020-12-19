@@ -54,17 +54,14 @@
     <script>
 
             $( ".dot" ).click(function(){
+                // Change the color of the product on selection
                 var $hex = $(this).attr("data-hex");
-                // console.log($hex);
                 $("#product-shape").css({'fill' : $hex});
 
+                // Change the name of the color on selection
                 var $textTag = $(this).attr("tag");
                 $(".color-name").html($textTag);
-
             });
-
-
-
 
     </script>
 
