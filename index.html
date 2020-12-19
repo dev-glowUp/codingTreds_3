@@ -29,12 +29,12 @@
                 <p>80% Organic cotton + 20% Polyester</p>
                 <hr>
                 <div class="color-change-dots">
-                    <span onclick="testeClick(dot1)" class="dot color" style="background-color: #5c67e1" data-hex="#5c67e1" tag="Indigo"></span>
-                    <span class="dot color" style="background-color: #484848" data-hex="#484848" tag="Anthracite"></span>
-                    <span class="dot color" style="background-color: #d898aa" data-hex="#d898aa" tag="Pink"></span>
-                    <span class="dot color" style="background-color: #dfa321" data-hex="#dfa321" tag="Yellow"></span>
-                    <span class="dot color" style="background-color: #c7c7c7" data-hex="#c7c7c7" tag="Grey"></span>
-                    <span class="color-name">Marsala</span>
+                    <span class="dot" data-hex="#5c67e1" tag="Indigo"></span>
+                    <span class="dot" data-hex="#484848" tag="Anthracite"></span>
+                    <span class="dot" data-hex="#d898aa" tag="Pink"></span>
+                    <span class="dot" data-hex="#dfa321" tag="Yellow"></span>
+                    <span class="dot" data-hex="#c7c7c7" tag="Grey"></span>
+                    <span class="color-name">Indigo</span>
                 </div>
                 <a href="#">Add to Cart</a>
 
@@ -49,48 +49,22 @@
             </div>
 
     </div>
-    
+
+    <script src="/Jquery/jquery-3.5.1.min.js"></script>
     <script>
 
-        const overlay = document.getElementById("product-shape");
+            $( ".dot" ).click(function(){
+                var $hex = $(this).attr("data-hex");
+                // console.log($hex);
+                $("#product-shape").css({'fill' : $hex});
 
-        var dot1 = document.getElementsByClassName("dot") [0];
+                var $textTag = $(this).attr("tag");
+                $(".color-name").html($textTag);
 
-        var text = document.querySelector(".color-name");
-
-
-        // for (var i = 0; i < dot.length; i++) {
-        //     dot[i].onclick = callFunc;
-        //     console.log(dot[i]);
-
-        console.log(dot1);
-
-         function testeClick(test) {
-             console.log(teste);
-         }
+            });
 
 
-            // function callFunc(dot) {
-            //     console.log("clicked");
-            //     console.log(dot);
-            //     changeColorName(dot);
-            // }
-        // }
 
-        // function changeColor(e) {
-        //     let hex = e.target.getAttribute("data-hex");
-        //     console.log(hex);
-        //     // overlay.style.fill = hex;
-        // }
-
-        // console.log(dot1);
-
-
-        // function changeColorName(a) {
-        //     let textTag = a.target.getAttribute("tag");
-        //     console.log(textTag);
-        //     text.innerHTML = textTag;
-        // }
 
     </script>
 
