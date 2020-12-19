@@ -1,3 +1,23 @@
+/* 
+
+This code was made with 🤍 for dev.glowUp Youtube Channel
+
+    #CodingTrends Series   |   nº3  Product Color Change with Jquery & SVG
+
+    ⚡️VIDEO: 
+
+    ✨Youtube:   https://www.youtube.com/channel/UCo9OcY66VYb4BgFBwvEdCLw
+    ✨Github:    https://github.com/dev-glowUp
+    ✨Website:   https://dev-glowup.myportfolio.com/
+    ✨Medium:    https://medium.com/dev-glowup
+    ✨Pinterest: https://www.pinterest.pt/dev_glowup/
+
+    🌟 Follow & Subscribe for more.. Thank you! 🌟
+    
+    Created by Beatriz Novais
+
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 
@@ -7,15 +27,28 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #e2e2e2;
-    font-family: 'Space Mono', monospace;
-    font-size: 18px;
-    color: #2b2b2b;
+:root {
+    /* COLOR */
+    --backgroud: #e2e2e2;
+    --text:  #2b2b2b;
+
+    --indigo: #5c67e1;
+    --anthracite: #484848;
+    --dustyPink: #d898aa;
+    --mustard: #dfa321;
+    --silver: #bbb;
 }
 
-.logo {
+body {
+    background-color: var(--backgroud);
+    color: var(--text);
     font-family: 'Space Mono', monospace;
+    font-size: 18px;
+}
+
+/* HERO / LOGO */
+
+.logo {
     font-weight: 400;
     letter-spacing: -.025em;
     font-size: 15vw;
@@ -23,8 +56,9 @@ body {
     width: 100vw;
     overflow: hidden;
     text-align: center;
-    color: #2b2b2b;
 }
+
+/* PRODUCT SECTION */
 
 .section {
     margin: 40px 0px;
@@ -32,10 +66,109 @@ body {
     grid-template-columns: 1fr auto auto 1fr;
 }
 
+/* DESCRIPTION */
+
+.product-description {
+    grid-column-start: 2;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 775px;
+    max-width: 550px;
+    letter-spacing: 0.35px;
+    line-height: 30px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: right;
+}
+
+p {
+    text-align: right;
+}
+
+hr {
+    border: 1px solid var(--text);
+  }
+
+/* PRODUCT COLOR OPTIONS - DOT */
+
+.dot {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot:nth-child(1) {
+  background-color: var(--indigo)
+}
+
+.dot:nth-child(2) {
+  background-color: var(--anthracite);
+}
+
+.dot:nth-child(3) {
+  background-color: var(--dustyPink);
+}
+
+.dot:nth-child(4) {
+  background-color: var(--mustard);
+}
+
+.dot:nth-child(5) {
+  background-color: var(--silver);
+}
+
+.color-name {
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.dot:hover {
+    border: 3px solid var(--text);
+    cursor: pointer;
+}
+
+/* ADD TO CART BUTON */
+
+a {
+  border: 2px solid var(--text);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--text);
+}
+
+a:hover {
+    background-color: var(--text);
+    color: var(--backgroud);
+}
+
+/* PRODUCT IMAGE */
+
 .container-product {
     position: relative;
     grid-column-start: 3;
 }
+
+/* IMAGE */
+
+.background-image {
+    position: absolute;
+    height: auto;
+    top: 0px;
+    left: 0px;
+}
+
+/* SVG */
 
 .product-svg {
     position: relative;
@@ -47,109 +180,5 @@ body {
 }
 
 .product-shape {
-    fill: #5c67e1;
+    fill: var(--indigo);
 }
-
-.background-image {
-    position: absolute;
-    height: auto;
-    top: 0px;
-    left: 0px;
-}
-
-.product-description {
-      padding: 0px 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      letter-spacing: 0.35px;
-      line-height: 30px;
-      height: 775px;
-      max-width: 550px;
-      grid-column-start: 2;
-
-      /* box-sizing:content-box; */
-}
-
-h2 {
-    font-family: 'Space Mono', monospace;
-    font-size: 40px;
-    font-weight: 400;
-    text-align: right;
-}
-
-p {
-      font-size: 18px;
-      text-align: right;
-      font-family: 'Space Mono', monospace;
-}
-
-.color-change-dot {
-      display: inline-block;
-}
-
-.dot {
-    height: 40px;
-    width: 40px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.dot:nth-child(1) {
-    background-color: #5c67e1;
-}
-
-.dot:nth-child(2) {
-    background-color: #484848;
-}
-
-.dot:nth-child(3) {
-    background-color: #d898aa;
-}
-
-.dot:nth-child(4) {
-    background-color: #dfa321;
-}
-
-.dot:nth-child(5) {
-    background-color: "#c7c7c7;
-}
-
-.color-name {
-      text-transform: uppercase;
-      margin-left: 10px;
-}
-
-.dot:hover {
-    cursor: pointer;
-}
-
-.dotSelected {
-    border: 3px solid #2b2b2b;
-}
-
-
-hr {
-    border: 1px solid #2b2b2b;
-}
-
-a {
-    border: 2px solid #2b2b2b;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Space Mono', monospace;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 50px;
-    color: #2b2b2b;
-}
-
-a:hover {
-      background-color: #2b2b2b;
-      color: white;
-}
-
