@@ -4,7 +4,7 @@ This code was made with 🤍 for dev.glowUp Youtube Channel
 
     #CodingTrends Series   |   nº3  Product Color Change with Jquery & SVG
 
-    ⚡️VIDEO: 
+    ⚡️VIDEO: https://youtu.be/xD6sN91ZFMU
 
     ✨Youtube:   https://www.youtube.com/channel/UCo9OcY66VYb4BgFBwvEdCLw
     ✨Github:    https://github.com/dev-glowUp
@@ -25,13 +25,14 @@ This code was made with 🤍 for dev.glowUp Youtube Channel
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    vertical-align:top;
 }
 
 :root {
     /* COLOR */
     --backgroud: #e2e2e2;
     --text:  #2b2b2b;
-
+    
     --indigo: #5c67e1;
     --anthracite: #484848;
     --dustyPink: #d898aa;
@@ -179,6 +180,3 @@ a:hover {
     width: 650px;
 }
 
-.product-shape {
-    fill: var(--indigo);
-}
